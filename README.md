@@ -24,9 +24,9 @@
 
 1. 必要なライブラリをインストールします。
 
-\`\`\`bash
+```bash
 pip install flet boto3
-\`\`\`
+```
 
 2. AWS認証情報を設定します。AWS CLIを使用して設定するか、環境変数に設定します。
 
@@ -34,7 +34,7 @@ pip install flet boto3
 
 以下のスクリプトを実行します。
 
-\`\`\`python
+```python
 import flet as ft
 import boto3
 import json
@@ -101,7 +101,7 @@ def main(page: ft.Page):
     pass
 
 ft.app(target=main)
-\`\`\`
+```
 
 ### 使い方
 
