@@ -22,18 +22,25 @@ def submitMessage(message):
 
 def main(page: ft.Page):
     def submit(e):
-        page.add(ft.Text(tb1.value))
-        reply = ft.Text(submitMessage(tb1.value))
-        
-        
-        
-        page.add(reply)
+        chat.controls.append(ft.Text(tb1.value))
+
+        page.add(chat)
+
+        chat.controls.append(ft.Text(submitMessage(tb1.value)))
+        page.add(chat)
 
     # add/update controls on Page
     tb1 = ft.TextField(multiline=True, autofocus=True)
     submitBtn = ft.ElevatedButton(text="送信", on_click=submit)
 
     page.add(tb1, submitBtn)
+    chater = "You"
+    repluier = "Claude"
+    chat_log = []
+
+    chat = ft.ListView(
+        auto_scroll=True
+    )
 
     pass
 
